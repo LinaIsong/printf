@@ -16,7 +16,7 @@ int print_b(va_list val)
 	for (i = 0; i < 32; i++)
 	{
 		p = ((a << (32 - i)) & n);
-		if (p >> (31 - i))
+		if (p >> (31:wq- i))
 			non_zero =  1;
 		if (non_zero)
 		{
