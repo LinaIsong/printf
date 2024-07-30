@@ -22,13 +22,13 @@ int print_b(va_list val)
 		{
 			b = p >> (31 - i);
 			_putchar(b = 48);
-			count++;
+			count_c++;
 		}
 	}
-	if (count == 0)
+	if (count_c == 0)
 	{
-		count++;
+		count_c++;
 		_putchar('0');
 	}
-	return (count);
+	return (count_c);
 }
