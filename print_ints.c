@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * print_ints - prints interger
+ * _printf_ints - prints interger
  * @args: argument to print
  * Return: number of characters printed
  */
-int print_ints(va_list args)
+int _printf_ints(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
@@ -18,7 +18,7 @@ int print_ints(va_list args)
 		_putchar('-');
 		num = -num;
 		n = -n;
-		last - -last;
+		last = -last;
 		i++;
 	}
 	if (num > 0)
@@ -35,7 +35,7 @@ int print_ints(va_list args)
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			i++
+			i++;
 		}
 	}
 	_putchar(last + '0');
@@ -44,11 +44,11 @@ int print_ints(va_list args)
 }
 #include "main.h"
 /**
- * print_dec - prints decimal
+ * _printf_dec - prints decimal
  * @args: argument to print
  * Return: number of characters printed
  */
-int print_dec(va_list args)
+int _printf_dec(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
@@ -62,7 +62,7 @@ int print_dec(va_list args)
 		_putchar('-');
 		num = -num;
 		n = -n;
-		last - -last;
+		last = -last;
 		i++;
 	}
 	if (num > 0)
@@ -79,7 +79,7 @@ int print_dec(va_list args)
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			i++
+			i++;
 		}
 	}
 	_putchar(last + '0');

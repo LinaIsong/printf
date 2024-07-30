@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 	fmt_link sp[] = {
 		{"%c", _printf_char}, {"%s", _printf_string},
 		{"%%", _printf_percent}, {"%d", _printf_dec},
-		{"%i", _printf_int}
+		{"%i", _printf_ints}, {"%b", print_b}
 	};
 
 	va_list args;
