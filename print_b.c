@@ -15,20 +15,20 @@ int print_b(va_list val)
 
 	for (i = 0; i < 32; i++)
 	{
-		p = ((a << (32 - i)) & num);
+		p = ((a << (31 - i)) & num);
 		if (p >> (31 - i))
 			non_zero = 1;
 		if (non_zero)
 		{
 			b = p >> (31 - i);
-			_putchar(b = 48);
-			count++;
+			_putchar(b + 48);
+			count_c++;
 		}
 	}
-	if (count == 0)
+	if (count_c == 0)
 	{
-		count++;
+		count_c++;
 		_putchar('0');
 	}
-	return (count);
+	return (count_c);
 }
