@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	link sp[] = {
+	fmt_link sp[] = {
 		{"%c", _printf_char}, {"%s", _printf_string},
 		{"%%", _printf_percent}, {"%d", _printf_dec},
 		{"%i", _printf_int}
@@ -37,7 +37,7 @@ Now:
 				i = i + 2;
 				goto Now;
 			}
-			j--
+			j--;
 		}
 		_putchar(format[i]);
 		len++;
