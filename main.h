@@ -17,11 +17,11 @@
  * Description: defines a new type called format with its
  * format specifier and related function
  */
-typdef struct format
+typedef struct format
 {
 	char *spec;
 	int (*fmt)();
-} link;
+} fmt_link;
 
 int _putchar(char c);
 int _printf_char(va_list arg);
