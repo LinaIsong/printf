@@ -4,14 +4,14 @@
  * _printf_string - prints a string
  * @arg: string arguments to be printed
  *
- * Return: Always (Success) 0
+ * Return: Length of string
  */
 int _printf_string(va_list arg)
 {
 	char *str;
 	int i, length;
 
-	str = va_arg(val, char *);
+	str = va_arg(arg, char *);
 
 	if (str == NULL)
 	{
@@ -27,4 +27,5 @@ int _printf_string(va_list arg)
 		for (i = 0; i < length; i++)
 			_putchar(str[i]);
 		return (length);
+	}
 }
