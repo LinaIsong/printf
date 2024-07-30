@@ -29,8 +29,9 @@ int _printf_string(va_list arg);
 int _strlen(char *s);
 int _strlenc(const char *s);
 int _printf_percent(void);
-int _printf_int(va_list args);
+int _printf_ints(va_list args);
 int _printf_dec(va_list args);
 int _printf(const char *format, ...);
+int print_b(va_list val);
 
 #endif /* MAIN_H */
