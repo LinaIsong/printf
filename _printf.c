@@ -17,30 +17,34 @@ int _printf(const char *format, ...)
 
 	va_list args;
 	int i = 0, j, len = 0;
+	int p;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 	{
-		return (1);
+		return (-1);
 	}
 
-Now:
+
 	while (format[i] != '\0')
 	{
-		j = 4;
-		while (j >= 0)
+		p = 0;
+		for (j = 0; j < sizeof(sp) / sizeof(sp[0]); j++)
 		{
 			if (sp[j].spec[0] == format[i] && sp[j].spec[1] == format[i + 1])
 			{
 				len += sp[j].fmt(args);
-				i = i + 2;
-				goto Now;
+				i = i += 2;
+				p = 1;
+				break;
 			}
-			j--;
 		}
-		_putchar(format[i]);
-		len++;
-		i++;
+		if (!p)
+		{
+			_putchar(format[i]);
+			len++;
+			i++;
+		}
 	}
 	va_end(args);
 	return (len);
