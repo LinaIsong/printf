@@ -17,6 +17,7 @@
  * Description: defines a new type called format with its
  * format specifier and related function
  */
+ 
 typedef struct format
 {
 	char *spec;
