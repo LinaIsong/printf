@@ -12,8 +12,9 @@ int _printf(const char *format, ...)
 	fmt_link sp[] = {
 		{"%c", _printf_char}, {"%s", _printf_string},
 		{"%%", _printf_percent}, {"%d", _printf_dec},
-		{"%i", _printf_ints}, {"%b", _printf_b}
+		{"%i", _printf_ints}, {"%b", print_b}
 	};
+
 	va_list args;
 	int i = 0, j, len = 0;
 
@@ -38,10 +39,10 @@ Now:
 			}
 			j--;
 		}
-		putchar (format[i]);
+		_putchar(format[i]);
 		len++;
-		1++;
+		i++;
 	}
-		va end(args);
-		return (len);
+	va_end(args);
+	return (len);
 }
