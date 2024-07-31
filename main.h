@@ -9,20 +9,25 @@
 #include <string.h>
 
 /**
- * struct format - a new type called format
- * @spec: Pointer to a format specifier
- * @fmt: Pointer to a function to print output based
- * on a format specifier
+ * struct fmt - Struct op
  *
- * Description: defines a new type called format with its
- * format specifier and related function
+ * @fmt: The format.
+ * @fn: The function associated.
  */
- 
-typedef struct format
+struct fmt
 {
-	char *spec;
-	int (*fmt)();
-} fmt_link;
+	char fmt;
+	int (*fn)(va_list, char[], int, int, int, int);
+};
+
+
+/**
+ * typedef struct fmt fmt_t - Struct op
+ *
+ * @fmt: The format.
+ * @fm_t: The function associated.
+ */
+typedef struct fmt fmt_t;
 
 int _putchar(char c);
 int _printf_char(va_list arg);
