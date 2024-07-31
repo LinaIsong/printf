@@ -26,8 +26,6 @@ typedef struct format
 int _putchar(char c);
 int _printf_char(va_list arg);
 int _printf_string(va_list arg);
-int _strlen(char *s);
-int _strlenc(const char *s);
 int _printf_percent(void);
 int _printf_ints(va_list args);
 int _printf_dec(va_list args);
