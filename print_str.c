@@ -8,10 +8,10 @@
  */
 int _printf_string(va_list arg)
 {
-	char *str;
-	int length;
+	const char *str;
+	int length = 0;
 
-	str = va_arg(arg, char *);
+	str = va_arg(arg, const char *);
 
 	if (str == NULL)
 	{
