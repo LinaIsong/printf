@@ -3,11 +3,11 @@
 /**
  * _printf_percent - prints the % char
  *
- * Return: Always (Success) 0
+ * Return: Always (Success) 1
  */
 int _printf_percent(void)
 {
-	_putchar(37);
+	write(1, "%", 1);
 
-	return (0);
+	return (1);
 }
