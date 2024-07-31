@@ -11,12 +11,12 @@
 /**
  * struct format - a new type called format
  * @spec: Pointer to a format specifier
- * @fmt: Fointer to a function to print output based
+ * @fmt: Pointer to a function to print output based
  * on a format specifier
- * Description: defines new type called format with its
+ *
+ * Description: defines a new type called format with its
  * format specifier and related function
-*/
-
+ */
 typedef struct format
 {
 	char *spec;
@@ -25,13 +25,13 @@ typedef struct format
 
 int _putchar(char c);
 int _printf_char(va_list arg);
-int _printf string(va list arg);
+int _printf_string(va_list arg);
 int _strlen(char *s);
 int _strlenc(const char *s);
-int _printf percent(void);
-int _printf_ints(va list args);
-int printf dec(va list args);
+int _printf_percent(void);
+int _printf_ints(va_list args);
+int _printf_dec(va_list args);
 int _printf(const char *format, ...);
-int _printf b(va list val);
+int print_b(va_list val);
 
-#endif /* MAIN Η */
+#endif /* MAIN_H */
