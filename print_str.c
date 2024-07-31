@@ -4,28 +4,25 @@
  * _printf_string - prints a string
  * @arg: string arguments to be printed
  *
- * Return: Length of string
+ * Return: Length of string printed
  */
 int _printf_string(va_list arg)
 {
 	char *str;
-	int i, length;
+	int length;
 
 	str = va_arg(arg, char *);
 
 	if (str == NULL)
 	{
 		str = "(null)";
-		length = _strlen(str);
-		for (i = 0; i < length; i++)
-			_putchar(str[i]);
-		return (length);
 	}
-	else
+	while (*str)
 	{
-		length = _strlen(str);
-		for (i = 0; i < length; i++)
-			_putchar(str[i]);
-		return (length);
+		write(1, str, 1);
+		str++;
+		length++;
 	}
+
+	return (length);
 }
