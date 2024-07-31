@@ -9,7 +9,7 @@ int print_b(va_list val)
 {
 	int non_zero = 0;
 	int count_c = 0;
-	int i, a = 0, b;
+	int i, a = 1, b;
 	unsigned int n = va_arg(val, unsigned int);
 	unsigned int p;
 
