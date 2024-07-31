@@ -30,8 +30,7 @@ Now:
 		j = 4;
 		while (j >= 0)
 		{
-			if (sp[j].spec[0] == format[i] && sp[j].spec[1]
-					== format[i + 1])
+			if (sp[j].spec[0] == format[i] && sp[j].spec[1] == format[i + 1])
 			{
 				len += sp[j].fmt(args);
 				i = i + 2;
