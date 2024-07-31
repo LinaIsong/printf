@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_b - convert to binary
+ * _printf_b - convert to binary
  * @val: A va_list that contains the unsigned int to be printed in binary
  * Return: integer
  */
 
-int print_b(va_list val)
+int _printf_b(va_list val)
 {
 	int flag = 0;
 	int count = 0;

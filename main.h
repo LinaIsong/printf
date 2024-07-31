@@ -32,6 +32,6 @@ int _printf_percent(void);
 int _printf_ints(va_list args);
 int _printf_dec(va_list args);
 int _printf(const char *format, ...);
-int print_b(va_list val);
+int _printf_b(va_list val);
 
 #endif /* MAIN_H */
