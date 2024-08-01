@@ -25,11 +25,12 @@ typedef struct format
 
 int _putchar(char c);
 int _printf_char(va_list arg);
-int _printf_string(va_list arg);
 int _printf_percent(void);
 int _printf_ints(va_list args);
 int _printf_dec(va_list args);
 int _printf(const char *format, ...);
 int print_b(va_list val);
+int print_c(va_list val);
+int print_string(va_list val)
 
 #endif /* MAIN_H */

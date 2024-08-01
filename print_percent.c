@@ -7,7 +7,7 @@
  */
 int _printf_percent(void)
 {
-	write(1, "%", 1);
+	_putchar(37);
 
 	return (1);
 }
