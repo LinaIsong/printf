@@ -25,6 +25,15 @@
  * @fn: The function associated.
  */
 struct fmt
+ * struct format - a new type called format
+ * @spec: Pointer to a format specifier
+ * @fmt: Pointer to a function to print output based
+ * on a format specifier
+ *
+ * Description: defines a new type called format with its
+ * format specifier and related function
+ */
+typedef struct format
 {
 	char fmt;
 	int (*fn)(va_list, char[], int, int, int, int);
@@ -38,7 +47,6 @@ struct fmt
  * @fm_t: The function associated.
  */
 typedef struct fmt fmt_t;
-
 int _printf(const char *format, ...);
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
@@ -113,5 +121,14 @@ int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
+
+int _putchar(char c);
+int _printf_char(va_list arg);
+int _printf_string(va_list arg);
+int _printf_percent(void);
+int _printf_ints(va_list args);
+int _printf_dec(va_list args);
+int _printf(const char *format, ...);
+int print_b(va_list val);
 
 #endif /* MAIN_H */
